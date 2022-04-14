@@ -11,8 +11,9 @@
     <color name="colorPrimaryDark">#673AB7</color>
     <color name="colorAccent">#03DAC5</color>
 
-    <color name="colorPurple">#673AB7</color>
-    <color name="colorBlue">#3F51B5</color>
+    <color name="colorMain">#F9DCC4</color>
+    <color name="colorSecondary">#E38976</color>
+    <color name="colorIcon">#C64E3B</color>
 
     <color name="orange">#FF9800</color>
 

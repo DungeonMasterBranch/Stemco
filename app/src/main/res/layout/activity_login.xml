@@ -5,18 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="right"
-    android:background="@drawable/background"
+    android:background="@drawable/background_bottom"
     tools:context=".loginActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/quizmelogo" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -27,8 +17,7 @@
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,18 +31,9 @@
                 android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Login with account"
-                android:textColor="#673AB7"
+                android:textColor="@color/colorSecondary"
                 android:textSize="24sp"
                 android:textStyle="bold" />
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="100dp"
-                android:layout_height="5dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/background" />
 
             <EditText
                 android:id="@+id/emailBox"
@@ -63,7 +43,7 @@
                 android:background="@drawable/textbox"
                 android:drawableLeft="@drawable/email"
                 android:drawablePadding="15dp"
-                android:drawableTint="@color/colorPurple"
+                android:drawableTint="@color/colorIcon"
                 android:ems="10"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
@@ -79,7 +59,7 @@
                 android:background="@drawable/textbox"
                 android:drawableLeft="@drawable/password"
                 android:drawablePadding="15dp"
-                android:drawableTint="@color/colorPurple"
+                android:drawableTint="@color/colorIcon"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
@@ -95,19 +75,20 @@
                 android:layout_marginBottom="10dp"
                 android:gravity="right"
                 android:text="Forget your password?"
+                android:textColor="@color/colorSecondary"
                 android:textSize="14sp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/loginBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/button_2"
+                android:background="@drawable/submit_btn"
                 android:text="Login" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/submitBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
