@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="right"
     android:background="@drawable/background_bottom"
-    tools:context=".loginActivity">
+    tools:context=".signinActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/emailBox"
+                android:id="@+id/emailBoxLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -50,7 +50,7 @@
                 android:padding="15dp" />
 
             <EditText
-                android:id="@+id/passwordBox"
+                android:id="@+id/passwordBoxLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

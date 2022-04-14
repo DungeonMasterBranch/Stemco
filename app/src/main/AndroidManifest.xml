@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizMe">
         <activity
-            android:name=".SignupActivity"
+            android:name=".signupActivity"
             android:exported="false" />
         <activity
-            android:name=".loginActivity"
+            android:name=".signinActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
