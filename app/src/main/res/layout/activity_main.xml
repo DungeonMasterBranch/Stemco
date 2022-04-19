@@ -13,11 +13,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="116dp"
         android:layout_marginEnd="285dp"
-        android:text="Login"
+        android:text="Amgin"
         android:onClick="toLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/register"
@@ -26,9 +27,10 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="285dp"
-        android:text="Register"
+        android:text="Amester"
         android:onClick="toRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 </androidx.constraintlayout.widget.ConstraintLayout>
