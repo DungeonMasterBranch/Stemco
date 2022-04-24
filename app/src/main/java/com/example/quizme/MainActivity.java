@@ -3,10 +3,8 @@ package com.example.quizme;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
-import androidx.fragment.app.FragmentActivity;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +12,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.quizme.TaskFragments.ListeningFragment;
+import com.example.quizme.TaskFragments.ReadingFragment;
+import com.example.quizme.TaskFragments.SpeakingFragment;
+import com.example.quizme.TaskFragments.WritingFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -40,7 +42,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_listening:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ListeningFragment()).commit();
+                break;
+            case R.id.nav_reading:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ReadingFragment()).commit();
+                break;
+            case R.id.nav_speaking:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new SpeakingFragment()).commit();
+                break;
+            case R.id.nav_writing:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new WritingFragment()).commit();
+                break;
+            case R.id.nav_profile:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new ProfileFragment()).commit();
+                break;
+            case R.id.nav_register:
+                startActivity(new Intent(this, SignupActivity.class));
+                break;
+            case R.id.nav_login:
+                startActivity(new Intent(this, SigninActivity.class));
+                break;
+
+
+        }
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -51,19 +91,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_register:
-                startActivity(new Intent(this, signupActivity.class));
-                break;
-            case R.id.nav_login:
-                startActivity(new Intent(this, signinActivity.class));
-                break;
-
-        }
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 }

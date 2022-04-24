@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_bottom"
-    tools:context=".signupActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -15,8 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/stemco"
-        tools:visibility="visible" />
+        tools:visibility="invisible" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

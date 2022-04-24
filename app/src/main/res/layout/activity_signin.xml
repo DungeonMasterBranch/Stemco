@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="right"
     android:background="@drawable/background_bottom"
-    tools:context=".signinActivity">
+    tools:context=".SigninActivity">
 
 
     <ImageView

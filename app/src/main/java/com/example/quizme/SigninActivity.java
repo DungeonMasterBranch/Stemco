@@ -15,9 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class signinActivity extends AppCompatActivity {
+public class SigninActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private EditText emailTextView, passwordTextView;
@@ -81,7 +80,7 @@ public class signinActivity extends AppCompatActivity {
                                     // if sign-in is successful
                                     // intent to home activity
                                     Intent intent
-                                            = new Intent(signinActivity.this,
+                                            = new Intent(SigninActivity.this,
                                             MainActivity.class);
                                     startActivity(intent);
                                 }
