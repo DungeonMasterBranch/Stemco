@@ -16,7 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class signupActivity extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private EditText emailTextView, passwordTextView;
@@ -77,8 +77,8 @@ public class signupActivity extends AppCompatActivity {
 
                             // if the user created intent to login activity
                             Intent intent
-                                    = new Intent(signupActivity.this,
-                                    signinActivity.class);
+                                    = new Intent(SignupActivity.this,
+                                    SigninActivity.class);
                             startActivity(intent);
                         }
                         else {
