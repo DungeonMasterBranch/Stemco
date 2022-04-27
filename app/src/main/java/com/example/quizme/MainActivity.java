@@ -4,6 +4,12 @@ package com.example.quizme;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -19,9 +25,12 @@ import com.example.quizme.TaskFragments.WritingFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
+
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawer;
+
 
 
     @Override
@@ -41,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
 
     }
 
@@ -74,8 +82,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_login:
                 startActivity(new Intent(this, SigninActivity.class));
                 break;
-
-
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
