@@ -6,4 +6,11 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ratings">Progress</string>
+    <string name="info">All Data</string>
+
+    <string name="listening">IELTS Listening</string>
+    <string name="writing">IELTS Writing</string>
+    <string name="reading">IELTS Reading</string>
+    <string name="speaking">IELTS Speaking</string>
 </resources>
