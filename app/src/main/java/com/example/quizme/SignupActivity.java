@@ -75,10 +75,11 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG)
                                     .show();
 
+                            mAuth.signInWithEmailAndPassword(email,password);
                             // if the user created intent to login activity
                             Intent intent
                                     = new Intent(SignupActivity.this,
-                                    SigninActivity.class);
+                                    MainActivity.class);
                             startActivity(intent);
                         }
                         else {

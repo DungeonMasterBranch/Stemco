@@ -61,19 +61,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Aslan Kotakbas"
+                        android:text="Full Name"
                         android:textColor="#e38978"
                         android:textSize="21sp"
                         android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Aslan Pidor"
-                        android:textColor="#e38978"
-                        android:textSize="14sp" />
-
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -116,12 +107,13 @@
                             android:layout_weight="1" />
 
                         <TextView
+                            android:id="@+id/editBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="10dp"
                             android:text="Edit"
                             android:textColor="#e38576"
-                            android:textSize="14sp"
+                            android:textSize="25sp"
                             android:textStyle="bold" />
                     </LinearLayout>
 
@@ -145,11 +137,12 @@
                                 android:src="@drawable/ic_profile"
                                 />
 
-                            <TextView
+                            <EditText
+                                android:id="@+id/nameEdit"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
-                                android:text="Aslan Kotakbas"
+                                android:text="Name"
                                 android:textColor="@color/colorSecondary"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -168,11 +161,12 @@
                                 android:padding="10dp"
                                 android:src="@drawable/ic_email" />
 
-                            <TextView
+                            <EditText
+                                android:id="@+id/emailEdit"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
-                                android:text="aslanpidr@mail.ru"
+                                android:text="E-mail"
                                 android:textColor="@color/colorSecondary"
                                 android:textSize="15sp" />
                         </LinearLayout>
@@ -191,11 +185,12 @@
                                 android:padding="10dp"
                                 android:src="@drawable/ic_password" />
 
-                            <TextView
+                            <EditText
+                                android:id="@+id/passwordEdit"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
-                                android:text="qwertyaslanlox"
+                                android:text="Password"
                                 android:textColor="@color/colorSecondary"
                                 android:textSize="15sp" />
                         </LinearLayout>
