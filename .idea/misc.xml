@@ -17,11 +17,14 @@
         <entry key="app/src/main/res/drawable/ic_bg.xml" value="0.1855" />
         <entry key="app/src/main/res/drawable/ic_call_24dp.xml" value="0.198" />
         <entry key="app/src/main/res/drawable/ic_dollar.xml" value="0.147" />
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.2845" />
         <entry key="app/src/main/res/drawable/ic_email24fp.xml" value="0.198" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.147" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1855" />
+        <entry key="app/src/main/res/drawable/ic_listening.xml" value="0.2845" />
         <entry key="app/src/main/res/drawable/ic_location_24dp.xml" value="0.198" />
         <entry key="app/src/main/res/drawable/ic_notifications_white_24dp.xml" value="0.198" />
+        <entry key="app/src/main/res/drawable/ic_password.xml" value="0.2845" />
         <entry key="app/src/main/res/drawable/ic_paypal.xml" value="0.147" />
         <entry key="app/src/main/res/drawable/ic_person.xml" value="0.227" />
         <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.227" />

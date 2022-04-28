@@ -142,9 +142,7 @@
                                 android:layout_height="40dp"
                                 android:background="@drawable/circular_grey_bordersolid"
                                 android:padding="10dp"
-                                android:src="@drawable/user"
-
-
+                                android:src="@drawable/ic_profile"
                                 />
 
                             <TextView
@@ -191,7 +189,7 @@
                                 android:layout_height="40dp"
                                 android:background="@drawable/circular_grey_bordersolid"
                                 android:padding="10dp"
-                                android:src="@drawable/password" />
+                                android:src="@drawable/ic_password" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -264,7 +262,7 @@
                             android:layout_height="55dp"
                             android:background="@drawable/circular_grey_bordersolid"
                             android:padding="10dp"
-                            android:src="@drawable/star" />
+                            android:src="@drawable/ic_star" />
 
                         <Space
                             android:layout_width="wrap_content"
