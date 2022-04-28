@@ -19,9 +19,12 @@ import com.example.quizme.TaskFragments.WritingFragment;
 import com.google.android.material.navigation.NavigationView;
 
 
+
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawer;
+
 
 
     @Override
@@ -41,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
 
     }
 
