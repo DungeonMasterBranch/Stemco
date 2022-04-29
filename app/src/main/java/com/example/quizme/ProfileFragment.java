@@ -1,6 +1,5 @@
 package com.example.quizme;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +16,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class ProfileFragment extends Fragment {
+
+
+    public String password, email;
+
+    public ProfileFragment(){
+
+    }
+
+    public ProfileFragment(String name, String email){
+        this.password = name;
+        this.email = email;
+    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,6 +43,7 @@ public class ProfileFragment extends Fragment {
 
 //        vUser.reload();
 //        vUser = mAuth.getCurrentUser();
+
 
 
         EditText nameEdit, emailEdit;
