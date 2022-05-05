@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".SignupActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/banner"
         android:layout_width="250dp"
         android:layout_height="150dp"
         android:layout_marginTop="40dp"
@@ -19,6 +19,7 @@
         tools:visibility="visible" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" >
+        app:layout_constraintTop_toBottomOf="@+id/banner">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,6 +50,20 @@
                 android:textStyle="bold" />
 
 
+            <EditText
+                android:id="@+id/nameSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/colorIcon"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textEmailAddress"
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/emailBox"
@@ -81,7 +96,8 @@
                 android:padding="15dp" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/submitBtn"
+
+                android:id="@+id/submitBtnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -89,10 +105,10 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/submit_btn"
                 android:text="Submit"
-                android:textColor="@color/colorMain"/>
+                android:textColor="@color/colorMain" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/loginBtn"
+                android:id="@+id/loginBtnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -100,7 +116,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/submit_btn"
                 android:text="Already have an account?"
-                android:textColor="@color/colorMain"/>
+                android:textColor="@color/colorMain" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -110,6 +126,8 @@
                 android:paddingTop="5dp"
                 android:text="By signing up you agree to our policy and terms and conditions"
                 android:textSize="10sp" />
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

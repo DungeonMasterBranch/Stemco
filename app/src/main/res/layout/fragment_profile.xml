@@ -134,8 +134,7 @@
                                 android:layout_height="40dp"
                                 android:background="@drawable/circular_grey_bordersolid"
                                 android:padding="10dp"
-                                android:src="@drawable/ic_profile"
-                                />
+                                android:src="@drawable/ic_profile" />
 
                             <EditText
                                 android:id="@+id/nameEdit"
@@ -168,6 +167,7 @@
                                 android:layout_marginLeft="20dp"
                                 android:text="E-mail"
                                 android:textColor="@color/colorSecondary"
+
                                 android:textSize="15sp" />
                         </LinearLayout>
 

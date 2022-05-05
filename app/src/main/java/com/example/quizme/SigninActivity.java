@@ -1,8 +1,5 @@
 package com.example.quizme;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,26 +8,36 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class SigninActivity extends AppCompatActivity {
+public class SigninActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
     private EditText emailTextView, passwordTextView;
     private Button Btn;
+
+    private Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
+
         mAuth = FirebaseAuth.getInstance();
         emailTextView = findViewById(R.id.emailBoxLogin);
         passwordTextView = findViewById(R.id.passwordBoxLogin);
         Btn = findViewById(R.id.loginBtn);
+
+        register = findViewById(R.id.submitBtn);
+        register.setOnClickListener(this);
 
         Btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,16 +80,25 @@ public class SigninActivity extends AppCompatActivity {
                                     @NonNull Task<AuthResult> task)
                             {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(),
-                                            "Login successful!!",
-                                            Toast.LENGTH_LONG)
-                                            .show();
-                                    // if sign-in is successful
-                                    // intent to home activity
-                                    Intent intent
-                                            = new Intent(SigninActivity.this,
-                                            MainActivity.class);
-                                    startActivity(intent);
+
+                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                                    if(user.isEmailVerified()){
+                                        Toast.makeText(getApplicationContext(),
+                                                "Login successful!!",
+                                                Toast.LENGTH_LONG)
+                                                .show();
+                                        // if sign-in is successful
+                                        // intent to home activity
+                                        Intent intent
+                                                = new Intent(SigninActivity.this,
+                                                MainActivity.class);
+                                        startActivity(intent);
+                                    }else{
+                                        user.sendEmailVerification();
+                                        Toast.makeText(SigninActivity.this, "check your email to verify your account!", Toast.LENGTH_LONG).show();
+                                    }
+
                                 }
                                 else {
                                     // sign-in failed
@@ -93,5 +109,15 @@ public class SigninActivity extends AppCompatActivity {
                                 }
                             }
                         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.submitBtn:
+                startActivity(new Intent(this, SignupActivity.class));
+                break;
+
+        }
     }
 }

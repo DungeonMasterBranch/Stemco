@@ -14,25 +14,18 @@ import androidx.fragment.app.Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ProfileFragment extends Fragment {
 
 
-    public String password, email;
 
-    public ProfileFragment(){
-
-    }
-
-    public ProfileFragment(String name, String email){
-        this.password = name;
-        this.email = email;
-    }
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_profile,container,false);
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -40,6 +33,9 @@ public class ProfileFragment extends Fragment {
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser vUser = mAuth.getCurrentUser();
+
+        FirebaseFirestore fFireStroe = FirebaseFirestore.getInstance();
+
 
 //        vUser.reload();
 //        vUser = mAuth.getCurrentUser();
@@ -57,17 +53,33 @@ public class ProfileFragment extends Fragment {
         //code for check and send verification;
 
         emailEdit.setText(vUser.getEmail());
-
             if (!vUser.isEmailVerified()){
                 verifyBtn.setVisibility(View.VISIBLE);
             } else {
                 verifyBtn.setVisibility(View.INVISIBLE);
             }
 
-
+//        public void fetchData()
+//    {
+//            DocumentReference document = fFireStroe.collection("users").document("HrBLagFe70gq7ferQHNWlLqzFl72");
+//            document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                @Override
+//                public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                    if(documentSnapshot.exists()){
+//
+//
+//                    }
+//                }
+//            })
+//                    .addOnFailureListener(new OnFailureListener() {
+//                        @Override
+//                        public void onFailure(@NonNull Exception e) {
+//                            Toast.makeText(getContext(), "check your email to verify your account!", Toast.LENGTH_LONG).show();
+//                        }
+//                    });
+//
+//    }
     }
-
-
 
 
 }
