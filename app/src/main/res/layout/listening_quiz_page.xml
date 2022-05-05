@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ListeningQuiz">
+
+    <ScrollView
+        android:id="@+id/scroolView_listening_quiz_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+
+        >
+
+        <!--Main Linear-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/circularbordersolid"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+
+            >
+
+
+
+            <!--Linear for Info-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="IELTS Listening Sample 5. Section 1"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="This is the first section of IELTS Listening test #5. The Listening module consists of 4 sections and takes 40 minutes. Listen to the audio and answer the questions. As you finish, press 'check' and proceed to the next section."
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="17sp"
+                     />
+
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:padding="16dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:secondaryProgressTint="@color/colorSecondary"/>
+
+
+                <ImageView
+                    android:id="@+id/btnplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:srcCompat="@drawable/ic_baseline_play_circle_filled_24"
+                    />
+
+
+                <TextView
+                    android:id="@+id/textViewQuestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Questions 1-5"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Complete the information below. Write NO MORE THAN ONE WORD OR A NUMBER for each answer."
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="17sp"
+                     />
+
+
+                <TextView
+                    android:id="@+id/textViewApartments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90dp"
+                    android:text="Apartment for rent"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+
+                <TableLayout
+                    android:padding="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#25E38976"
+                    android:stretchColumns="1">
+
+
+                    <TableRow>
+
+                        <TextView
+                            android:padding="10dip"
+                            android:text="Street"
+                            android:textColor="#e38978"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:gravity="left"
+                            android:padding="10dip"
+                            android:text="Bridge street"
+                            android:textColor="#e38978"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@color/white"
+                            android:padding="10dip"
+                            android:text="Street №"
+                            android:textColor="#e38978"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:background="@color/white"
+                            android:hint="(1) your answe"
+                            android:padding="10dip"
+
+                            android:textColor="#e38978"
+                            android:textSize="8sp" />
+
+                    </TableRow>
+
+
+                    <TableRow>
+
+                        <TextView
+                            android:padding="10dip"
+                            android:text="Included utilities"
+                            android:textColor="#e38978"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:text="Gas,heat,water"
+                            android:textColor="#e38978"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:background="@color/white"
+                            android:hint=", (2) your answer"
+                            android:padding="10dip"
+                            android:textColor="#e38978"
+                            android:textSize="8sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dip"
+                            android:text=",phone"
+                            android:textColor="#e38978"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@color/white"
+                            android:padding="10dip"
+                            android:text="Not included utilities"
+                            android:textColor="#e38978"
+                            android:textSize="8sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:background="@color/white"
+                            android:hint="(3) your answer"
+                            android:padding="10dip"
+                            android:textColor="#e38978"
+                            android:textSize="8sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+
+                <TextView
+                    android:id="@+id/textViewQuestionsixfromeigth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Questions 6-8"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="27sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+
+
+
+            <!-- for Info-->
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
